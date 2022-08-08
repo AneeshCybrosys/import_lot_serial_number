@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+import_lot_serial_number.access_import_wizard,access_import_wizard,import_lot_serial_number.model_import_wizard,base.group_user,1,1,1,1
+import_lot_serial_number.access_success_wizard,access_success_wizard,import_lot_serial_number.model_success_wizard,base.group_user,1,1,1,1

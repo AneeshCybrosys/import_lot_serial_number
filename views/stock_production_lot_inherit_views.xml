@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_lot_number_inherit_form" model="ir.ui.view">
+        <field name="name">stock.production.lot.serial.inherit</field>
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_lot_open_quants']"
+                   position="before">
+                <button name="import_button" icon="fa-upload"
+                        class="oe_stat_button"
+                        string="Import Lot And Serial Number" type="object"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_import_wizard" model="ir.ui.view">
+        <field name="model">import.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="attachment" filename="attachment_name"/>
+                        <field name="attachment_name" invisible="1"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="attachment_button"
+                            class="oe_highlight"
+                            string="Import" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_success_wizard" model="ir.ui.view">
+        <field name="model">success.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="message"/>
+                <footer>
+                <button string="OK" special="cancel"
+                        class="oe_highlight"/>
+            </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
