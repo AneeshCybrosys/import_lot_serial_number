@@ -11,7 +11,7 @@
 
     'author': "Minions 6",
 
-    'version': '15.0.1.0',
+    'version': '15.0.1.0.0',
     'depends': ['base', 'stock'],
 
     'data': [
